@@ -8,4 +8,11 @@ public class Car {
     private long price;
     private double engineCapacity;
     private boolean isNew;
+
+    public Car(String brand, String model, Color color, boolean isNew) {
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+        this.isNew = isNew;
+    }
 }
