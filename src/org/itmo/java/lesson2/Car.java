@@ -84,4 +84,6 @@ public class Car {
     public void setNew(boolean aNew) {
         isNew = aNew;
     }
+
+
 }
