@@ -56,5 +56,7 @@ public class Case {
             System.out.println("Even");
         }
 
+        System.out.println("New branch");
+
     }
 }
