@@ -38,13 +38,13 @@ public class Beast {
 
     public static void main(String[] args) {
         Beast beast = new Beast();
-        Beast beast1 = new Beast("Корова", "Млекопитающее");
+        Beast beast1 = new Beast("РљРѕСЂРѕРІР°", "РњР»РµРєРѕРїРёС‚Р°СЋС‰РµРµ");
 
         System.out.println(beast1.getName());
         System.out.println(beast1.getKind());
 
         System.out.println(beast);
-        beast.setName("Кот");
+        beast.setName("РљРѕС‚");
         System.out.println(beast);
     }
 }
