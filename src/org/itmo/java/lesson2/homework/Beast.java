@@ -44,7 +44,7 @@ public class Beast {
         System.out.println(beast1.getKind());
 
         System.out.println(beast);
-        beast.setName("Котт");
+        beast.setName("Кот");
         System.out.println(beast);
     }
 }
