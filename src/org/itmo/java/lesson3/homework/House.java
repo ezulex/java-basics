@@ -1,6 +1,7 @@
 package org.itmo.java.lesson3.homework;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class House {
     private int floorsCount;
@@ -32,9 +33,10 @@ public class House {
     }
 
     public int getAge() {
-//        LocalDate current_date = LocalDate.now();;
-//        int res = current_date - year;
-//        return res;
-        return 2022 - year;
+        LocalDate current_date = LocalDate.now();;
+        LocalDate date = LocalDate.of(year, 1, 1);
+        Period period = Period.between(date, current_date);
+        return period.getYears();
+        //return 2022 - year;
     }
 }
