@@ -42,6 +42,5 @@ public class StaticExample {
         int i = integer.parseInt("123");
         System.out.println(integer);
         System.out.println(i);
-        System.out
     }
 }
