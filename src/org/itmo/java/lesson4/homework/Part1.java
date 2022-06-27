@@ -69,11 +69,57 @@ public class Part1 {
         }
     }
 
+    public static boolean threeInArray() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Введите размерность массива: ");
+        int arrayLength = Integer.parseInt(reader.readLine());
+
+        int[] arr = new int[arrayLength];
+
+        for (int i = 0; i < arrayLength; i++) {
+            System.out.println("Введите следующий элемент: ");
+            arr[i] = Integer.parseInt(reader.readLine());
+        }
+
+        if (arr[0] == 3 || arr[arrayLength - 1] == 3) {
+            System.out.println("True");
+            return true;
+        } else {
+            System.out.println("False");
+            return false;
+        }
+
+    }
+
+    public static boolean oneOrThreeInArray() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Введите размерность массива: ");
+        int arrayLength = Integer.parseInt(reader.readLine());
+
+        int[] arr = new int[arrayLength];
+
+        for (int i = 0; i < arrayLength; i++) {
+            System.out.println("Введите следующий элемент: ");
+            arr[i] = Integer.parseInt(reader.readLine());
+            if (arr[i] == 1 || arr[i] == 3) {
+                System.out.println("True");
+                break;
+            } else {
+                continue;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) throws IOException {
 //        returnOdd();
 //        divThree();
 //        Part1.checkSumTwo();
 //        Part1.checkSumThree();
+//        Part1.threeInArray();
+        Part1.oneOrThreeInArray();
 
 
 
