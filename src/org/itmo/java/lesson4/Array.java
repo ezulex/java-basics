@@ -3,6 +3,9 @@ package org.itmo.java.lesson4;
 import org.itmo.java.lesson3.homework.Car;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class Array {
     public static void main(String[] args) {
@@ -54,11 +57,21 @@ public class Array {
             if(x == 2) {
                 continue;
             }
-
-
-
         }
+        varargMethod("safsf", "zfsdf");
 
+        System.out.println(Arrays.toString(intArray));
+
+        Arrays.sort(intArray);
+        System.out.println(Arrays.toString(intArray));
+
+        System.out.println(Arrays.binarySearch(intArray, 21));
 
     }
+
+    public static void varargMethod(String... line){
+        System.out.println(Arrays.toString(line));
+    }
+
+
 }
