@@ -26,5 +26,39 @@ public class Array {
         Car[] cars = new Car[1];
         cars[0] = new Car("Black", 3500);
         System.out.println(Arrays.toString(cars));
+
+        for (int i = 0; i < l.length; i++) {
+//            System.out.println(l[i]);
+        }
+
+        for (long l1 : l) {
+//            System.out.println(l1);
+        }
+
+        int x = 0;
+
+//        do {
+////            System.out.println(++x);
+//        } while (x != 10);
+
+        while (x != 10) {
+
+
+
+            System.out.println(x++);
+
+            if (x == 5) {
+                break;
+            }
+
+            if(x == 2) {
+                continue;
+            }
+
+
+
+        }
+
+
     }
 }
