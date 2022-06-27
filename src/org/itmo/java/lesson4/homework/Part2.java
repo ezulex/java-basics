@@ -96,7 +96,12 @@ public class Part2 {
                 arr1[i] = arr[i];
             }
         }
-        System.out.println(Arrays.toString(arr1));
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != 0) {
+                System.out.println(arr1[i]);
+                break;
+            }
+        }
     }
 
 
@@ -104,6 +109,6 @@ public class Part2 {
 //        Part2.checkSortArray();
 //        Part2.returnArray();
 //        Part2.changeArray();
-        Part2.uniqArrayIndex();
+//        Part2.uniqArrayIndex();
     }
 }
