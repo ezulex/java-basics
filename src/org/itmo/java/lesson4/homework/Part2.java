@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+
 public class Part2 {
 
     public static void checkSortArray() throws IOException {
@@ -80,15 +81,29 @@ public class Part2 {
             arr[i] = Integer.parseInt(reader.readLine());
         }
 
-        for (int i = 0; i < arr.length; i++) {
+        int[] arr1 = new int[arrayLength];
 
+        for (int i = 0; i < arr.length; i++) {
+            int buf = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if(i != j) {
+                    if (arr[i] == arr[j]) {
+                        buf++;
+                    }
+                }
+            }
+            if (buf == 0) {
+                arr1[i] = arr[i];
+            }
         }
+        System.out.println(Arrays.toString(arr1));
     }
 
 
     public static void main(String[] args) throws IOException {
 //        Part2.checkSortArray();
 //        Part2.returnArray();
-        Part2.changeArray();
+//        Part2.changeArray();
+        Part2.uniqArrayIndex();
     }
 }
