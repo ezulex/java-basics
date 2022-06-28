@@ -17,14 +17,14 @@ public class Part1 {
 
     public static void divThree() {
         for (int i = 0; i < 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i + " Делится на 3 и на 5");
+            }
+            if (i % 5 == 0) {
+                System.out.println(i + " Делится на 5");
+            }
             if (i % 3 == 0) {
                 System.out.println(i + " Делится на 3");
-                if (i % 5 == 0 ) {
-                    System.out.println(i + " Делится на 5");
-                    System.out.println(i + " Делится на 3 и на 5");
-                }
-            } else if (i % 5 == 0) {
-                System.out.println(i + " Делится на 5");
             }
         }
     }
@@ -121,7 +121,7 @@ public class Part1 {
 //        Part1.checkSumTwo();
 //        Part1.checkSumThree();
 //        Part1.threeInArray();
-        Part1.oneOrThreeInArray();
+//        Part1.oneOrThreeInArray();
 
 
 
