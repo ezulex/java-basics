@@ -1,6 +1,9 @@
 package org.itmo.java.lesson5.homework;
 
 public class ThirdCase {
+    /**
+     * Напишите метод, заменяющий в тексте все вхождения слова «бяка» на «[вырезано цензурой]».
+     */
 
     public static String stringReplace(String text) {
         text = text.replace("бяка", "[вырезано цензурой]");

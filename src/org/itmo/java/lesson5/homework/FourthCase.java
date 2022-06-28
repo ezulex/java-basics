@@ -1,6 +1,9 @@
 package org.itmo.java.lesson5.homework;
 
 public class FourthCase {
+    /**
+     * Имеются две строки. Найти количество вхождений одной (являющейся подстрокой) в другую.
+     */
 
     public static int countStringContains(String text, String containingText) {
         int buf = -1;

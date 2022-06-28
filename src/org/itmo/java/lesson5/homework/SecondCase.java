@@ -1,6 +1,9 @@
 package org.itmo.java.lesson5.homework;
 
 public class SecondCase {
+    /**
+     * Написать метод, который проверяет является ли слово палиндромом.
+     */
 
     public static boolean isPalindrom(String text) {
         text = text.replace(" ", "");
