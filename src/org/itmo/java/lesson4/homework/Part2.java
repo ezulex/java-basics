@@ -9,7 +9,19 @@ import java.util.Arrays;
 
 
 public class Part2 {
-
+    public static int[] bubbleSortedArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if(array[j] > array[i]) {
+                    int aj = array[j];
+                    int ai = array[i];
+                    array[j] = ai;
+                    array[i] = aj;
+                }
+            }
+        }
+        return array;
+    }
     public static void checkSortArray() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -17,18 +29,17 @@ public class Part2 {
         int arrayLength = Integer.parseInt(reader.readLine());
 
         int[] arr = new int[arrayLength];
-        int[] arr1 = new int[arrayLength];
+        int beforeDigit = 0;
 
         for (int i = 0; i < arrayLength; i++) {
             System.out.println("Введите следующий элемент: ");
             arr[i] = Integer.parseInt(reader.readLine());
-            arr1[i] = arr[i];
+            if ((i > 0) && (arr[i] < beforeDigit)) {
+                System.out.println("Массив не отсортирован, прекращаю ввод.");
+                break;
+            }
+            beforeDigit = arr[i];
         }
-
-        Arrays.sort(arr);
-
-        Boolean result = Arrays.equals(arr, arr1);
-        System.out.println(result);
     }
 
     public static void returnArray() throws IOException {
@@ -106,7 +117,7 @@ public class Part2 {
 
 
     public static void main(String[] args) throws IOException {
-//        Part2.checkSortArray();
+        Part2.checkSortArray();
 //        Part2.returnArray();
 //        Part2.changeArray();
 //        Part2.uniqArrayIndex();
