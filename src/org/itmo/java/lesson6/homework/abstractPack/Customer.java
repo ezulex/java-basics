@@ -1,0 +1,17 @@
+package org.itmo.java.lesson6.homework.abstractPack;
+
+public class Customer extends Human {
+    private String bankName;
+
+    public Customer(String name, String lastName, String bankName) {
+        super(name, lastName);
+        this.bankName = bankName;
+    }
+
+    @Override
+    public void getInformation() {
+        System.out.println("Name: " + name);
+        System.out.println("Last name: " + lastName);
+        System.out.println("Bank name: " + bankName);
+    }
+}
