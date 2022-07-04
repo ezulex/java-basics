@@ -4,7 +4,8 @@ import java.io.IOException;
 
 public class AdminUser extends User {
     @Override
-    public void setUserName() throws IOException {
-        super.setUserName();
+    public void setUserAge() throws IOException {
+        this.userName = super.getConsole();
+        System.out.println("Имя " + this.userName);
     }
 }

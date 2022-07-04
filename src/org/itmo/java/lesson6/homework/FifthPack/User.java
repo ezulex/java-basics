@@ -8,11 +8,13 @@ public class User {
     protected Integer userAge;
     protected String userName;
 
-    public void setUserAge() throws IOException {
-        this.userAge = Integer.parseInt(getStringFromKeyboard("возраст пользователя"));
+    public String getConsole() throws IOException {
+        String result = getStringFromKeyboard("значение");
+        return result;
     }
 
-    public void setUserName() throws IOException {
-        this.userName = getStringFromKeyboard("имя пользователя");
+    public void setUserAge() throws IOException {
+        this.userAge = Integer.parseInt(getConsole());
+        System.out.println("Возраст " + this.userAge);
     }
 }
