@@ -21,10 +21,11 @@ public class Main {
         Truck truck = new Truck(3500, "Scania", 'Y', 250.0f, 8, 16000);
         truck.newWheels(Integer.parseInt(getStringFromKeyboard("количество колёс")));
 
-        GiftBox giftBox = new GiftBox(Integer.parseInt(getStringFromKeyboard("количество вещей в коробке")));
+        GiftBox giftBox = new GiftBox();
+        giftBox.setThingCount();
         giftBox.getThingCount();
 
         AdminUser adminUser = new AdminUser();
-        adminUser.setUserAge(getStringFromKeyboard("имя пользователя"));
+        adminUser.setUserName();
     }
 }

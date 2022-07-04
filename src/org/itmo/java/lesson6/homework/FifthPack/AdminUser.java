@@ -1,8 +1,10 @@
 package org.itmo.java.lesson6.homework.FifthPack;
 
-public class AdminUser extends User {
+import java.io.IOException;
 
-    public void setUserAge(String userName) {
-        super.userName = userName;
+public class AdminUser extends User {
+    @Override
+    public void setUserName() throws IOException {
+        super.setUserName();
     }
 }
