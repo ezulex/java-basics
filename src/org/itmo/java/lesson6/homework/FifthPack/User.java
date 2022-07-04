@@ -2,6 +2,7 @@ package org.itmo.java.lesson6.homework.FifthPack;
 
 import java.io.IOException;
 
+import static java.lang.Integer.parseInt;
 import static org.itmo.java.lesson6.homework.GetString.getStringFromKeyboard;
 
 public class User {
@@ -14,7 +15,7 @@ public class User {
     }
 
     public void setUserAge() throws IOException {
-        this.userAge = Integer.parseInt(getConsole());
+        this.userAge = parseInt(getConsole());
         System.out.println("Возраст " + this.userAge);
     }
 }
