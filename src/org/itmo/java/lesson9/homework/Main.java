@@ -1,5 +1,6 @@
 package org.itmo.java.lesson9.homework;
 
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
@@ -18,7 +19,8 @@ public class Main {
         long startTime = System.currentTimeMillis();
         List<Integer> integers = new ArrayList<>();
         for (int i = 0; i < 1000000; i++) {
-            int ran = (int) (Math.random() * 1000);
+            Random random = new Random();
+            int ran = random.nextInt(1000);
             integers.add(ran);
         }
         long endTime = System.currentTimeMillis();
@@ -29,7 +31,8 @@ public class Main {
         long startTime = System.currentTimeMillis();
         List<Integer> integers = new LinkedList<>();
         for (int i = 0; i < 1000000; i++) {
-            int ran = (int) (Math.random() * 1000);
+            Random random = new Random();
+            int ran = random.nextInt(1000);
             integers.add(ran);
         }
         long endTime = System.currentTimeMillis();
@@ -39,20 +42,22 @@ public class Main {
     public static void chooseFromArrayList(List arrayList) {
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
-            int ran = (int) (Math.random() * 1000000);
+            Random random = new Random();
+            int ran = random.nextInt(1000000);
             arrayList.get(ran);
         }
         long endTime = System.currentTimeMillis();
-        System.out.println("Миллион случайных выборок из ArrayList получили за: " + (endTime-startTime) + "мс");
+        System.out.println("Сто тысяч случайных выборок из ArrayList получили за: " + (endTime-startTime) + "мс");
     }
     public static void chooseFromLinkedList(List linkedList) {
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
-            int ran = (int) (Math.random() * 1000000);
+            Random random = new Random();
+            int ran = random.nextInt(1000000);
             linkedList.get(ran);
         }
         long endTime = System.currentTimeMillis();
-        System.out.println("Миллион случайных выборок из LinkedList получили за: " + (endTime-startTime) + "мс");
+        System.out.println("Сто тысяч случайных выборок из LinkedList получили за: " + (endTime-startTime) + "мс");
     }
 
     public static void chooseNormFromArrayList(List arrayList) {
@@ -61,7 +66,7 @@ public class Main {
             arrayList.get(i);
         }
         long endTime = System.currentTimeMillis();
-        System.out.println("Миллион выборок по порядку из ArrayList получили за: " + (endTime-startTime) + "мс");
+        System.out.println("Сто тысяч выборок по порядку из ArrayList получили за: " + (endTime-startTime) + "мс");
     }
     public static void chooseNormFromLinkedList(List linkedList) {
         long startTime = System.currentTimeMillis();
@@ -69,10 +74,10 @@ public class Main {
             linkedList.get(i);
         }
         long endTime = System.currentTimeMillis();
-        System.out.println("Миллион выборок по порядку из LinkedList получили за: " + (endTime-startTime) + "мс");
+        System.out.println("Сто тысяч выборок по порядку из LinkedList получили за: " + (endTime-startTime) + "мс");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // First
         List<String> strings = new ArrayList<>();
         strings.add("250");
@@ -112,5 +117,13 @@ public class Main {
 
         chooseNormFromArrayList(arrList);
         chooseNormFromLinkedList(linkedList);
+
+
+        //Third
+
+        Game game = new Game();
+        game.createUser(game.createGame(), 100);
+        game.returnPointsByName();
+
     }
 }
