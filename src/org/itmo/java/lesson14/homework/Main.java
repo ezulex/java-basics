@@ -34,28 +34,35 @@ public class Main {
         /**
          * 3 задание
          */
-        Counter counter = new Counter();
-        for (int i = 0; i < 100; i++) {
-            Thread thread = new Thread(){
-                @Override
-                public void run() {
-                    for (int j = 0; j < 1000; j++) {
-                        counter.increment();
-                    }
-                }
-            };
+//        Counter counter = new Counter();
+//        for (int i = 0; i < 100; i++) {
+//            Thread thread = new Thread(){
+//                @Override
+//                public void run() {
+//                    for (int j = 0; j < 1000; j++) {
+//                        counter.increment();
+//                    }
+//                }
+//            };
+//
+//            thread.start();
+//
+//            try {
+//                thread.join();
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+//        System.out.println(counter.getCount());
 
-            thread.start();
 
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        System.out.println(counter.getCount());
-
-
+        /**
+         * 4 задание
+         */
+        Thread firstNameThread = new NameThread("Вася");
+        Thread secondNameThread = new NameThread("Петя");
+        firstNameThread.start();
+        secondNameThread.start();
 
     }
 }
